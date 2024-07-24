@@ -1,5 +1,6 @@
 .footer {
   @include grid(2, 8, 8);
+
   margin-top: 72px !important;
   padding: 58px 16px;
   background-color: $black;
@@ -74,10 +75,12 @@
   &__link {
     position: relative;
     color: $white;
+
     @include text;
 
     &::after {
       @include after-line;
+
       background-color: $white;
     }
 
@@ -94,6 +97,7 @@
 
   &__year {
     @include text;
+
     color: $white;
 
     @include on-tablet {
@@ -102,4 +106,13 @@
       align-self: center;
     }
   }
+}
+
+.footer__social a svg path {
+  fill: #F9512E;
+  transition: .3s;
+}
+
+.footer__social a:hover svg path {
+  fill: white;
 }
